@@ -13,14 +13,14 @@ jobs:
           echo '#### Ref'
           echo $GITHUB_REF
           echo '#### Git fetch'
-          git fetch origin
+          git fetch origin --unshallow
           echo '#### Git checkout'
           git checkout develop && git reset --hard origin/develop
       - name: pull
         run: |
           git status
           git branch -l
-          git fetch origin
+          git fetch origin --unshallow
           git branch -l
           ls -al
           git pull origin test
