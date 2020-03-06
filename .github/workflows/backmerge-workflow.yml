@@ -16,7 +16,8 @@ jobs:
           git fetch origin
           echo '#### Git checkout'
           git checkout develop && git reset --hard origin/develop
-      - run: git pull origin test
+      - name: pull
+        run: git pull origin test
       #- name: Merge to develop branch
       #  uses: devmasx/merge-branch@v1.1.0
       #  with:
