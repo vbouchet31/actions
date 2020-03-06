@@ -11,7 +11,7 @@ jobs:
       - name: Get downstream branches.
         run: |
           git status
-          echo ${{GITHUB_REF}}
+          echo GITHUB_REF
           git checkout develop
           git reset --hard origin/develop
           git status
