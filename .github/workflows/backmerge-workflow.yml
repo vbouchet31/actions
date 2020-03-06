@@ -12,6 +12,8 @@ jobs:
         run: |
           git status
           echo $GITHUB_REF
+          git remote -v
+          git fetch origin
           git checkout develop
           git reset --hard origin/develop
           git status
