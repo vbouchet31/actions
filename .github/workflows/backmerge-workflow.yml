@@ -12,22 +12,6 @@ jobs:
         run: |
           echo '#### Git status'
           git status
-          echo '#### Ref'
-          echo $GITHUB_REF
-          echo '#### Git remote'
-          git remote -v
-          echo '#### Git fetch'
-          git fetch origin
-          echo '#### Git config'
-          git config --list
-          echo '#### Git checkout'
-          git checkout develop
-          echo '#### Git reset'
-          git reset --hard origin/develop
-          echo '#### Git pull'
-          git pull origin test
-          echo '#### Git status'
-          git status
       #- name: Merge to develop branch
       #  uses: devmasx/merge-branch@v1.1.0
       #  with:
