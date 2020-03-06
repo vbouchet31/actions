@@ -13,6 +13,8 @@ jobs:
       - name: Get downstream branches.
         run: |
           # echo $GITHUB_REF
+          git config --global user.email "vincent.bouchet@example.com"
+          git config --global user.name "vbouchet31"
           git fetch origin
           git checkout develop
           git reset --hard origin/develop
