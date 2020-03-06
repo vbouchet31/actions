@@ -22,6 +22,7 @@ jobs:
           git branch -l
           git fetch origin
           git branch -l
+          ls -al
           git pull origin test
       #- name: Merge to develop branch
       #  uses: devmasx/merge-branch@v1.1.0
