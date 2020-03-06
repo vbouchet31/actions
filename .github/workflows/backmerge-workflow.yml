@@ -1,0 +1,11 @@
+name: Back-merge to downstream branches on merge
+on:
+  push:
+    branches-ignore:
+      - '*-build' # Ignore -build branches which are artifact branches.
+jobs:
+  build:
+    - uses: actions/checkout@v2
+    - name: Print
+      run: echo Halo !
+
