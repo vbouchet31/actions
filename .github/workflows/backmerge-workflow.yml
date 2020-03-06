@@ -16,6 +16,8 @@ jobs:
           git fetch origin
           git checkout develop
           git reset --hard origin/develop
+          git pull origin test
+          git push origin develop
           git status
       #- name: Merge to develop branch
       #  uses: devmasx/merge-branch@v1.1.0
