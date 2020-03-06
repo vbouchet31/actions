@@ -26,8 +26,6 @@ jobs:
           git reset --hard origin/develop
           echo '#### Git pull'
           git pull origin test
-          #echo '#### Git push'
-          #git push origin develop
           echo '#### Git status'
           git status
       #- name: Merge to develop branch
