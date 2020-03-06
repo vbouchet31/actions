@@ -10,20 +10,15 @@ jobs:
       - uses: actions/checkout@v2
       - name: Get downstream branches.
         run: |
-          echo '#### Git status'
-          git status
           echo '#### Ref'
           echo $GITHUB_REF
-          echo '#### Git remote'
-          git remote -v
           echo '#### Git fetch'
           git fetch origin
-          echo '#### Git config'
-          git config --list
           echo '#### Git checkout'
           git checkout develop
           echo '#### Git reset'
           git reset --hard origin/develop
+          git pull origin test
       #- name: Merge to develop branch
       #  uses: devmasx/merge-branch@v1.1.0
       #  with:
