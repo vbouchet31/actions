@@ -12,10 +12,11 @@ jobs:
           fetch-depth: 0
       - name: Get downstream branches.
         id: downstream
-        run: echo "::set-output name=branches::develop,develop"
+        #run: echo "::set-output name=branches::develop,develop"
+        run: ./.github/scripts/detect-downstream-branches.sh
       - name: Backmerge.
         run: |
-          echo ${{ steps.downstream.outputs.branches }}
+          #echo ${{ steps.downstream.outputs.branches }}
           # echo $GITHUB_REF
           #git config --global user.email "vincent.bouchet@example.com"
           #git config --global user.name "vbouchet31"
