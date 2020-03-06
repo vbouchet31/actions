@@ -5,7 +5,9 @@ on:
       - '*-build' # Ignore -build branches which are artifact branches.
 jobs:
   build:
-    - uses: actions/checkout@v2
-    - name: Print
-      run: echo Halo !
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Print
+        run: echo Halo !
 
