@@ -8,10 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Get downstream branches.
         run: |
           # echo $GITHUB_REF
-          git fetch --all --unshallow
+          git fetch origin
           git checkout develop
           git reset --hard origin/develop
           git pull origin test
