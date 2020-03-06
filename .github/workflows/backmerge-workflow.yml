@@ -8,11 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Merge to uat branch
-        uses: devmasx/merge-branch@v1.1.0
-        with:
-          type: now
-          target_branch: 'develop'
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
+      - name: Get downstream branches.
+        run: git status
+      #- name: Merge to develop branch
+      #  uses: devmasx/merge-branch@v1.1.0
+      #  with:
+      #    type: now
+      #    target_branch: 'develop'
+      #  env:
+      #    GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
